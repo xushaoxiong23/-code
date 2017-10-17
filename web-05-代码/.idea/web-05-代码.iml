@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../../06-day{完成响应式布局项目,如何定制bootstrap,em&amp;rem的异同,使用rem设置元素尺寸,使用rem、媒体查询根据结合设计图实现多屏幕适配}/web-06-代码" />
+    <content url="file://E:/服务器与ajax/服务器与ajaxDay01/源代码/ajax" />
+    <content url="file://E:/服务器与ajax/服务器与ajaxDay03/源代码/demo" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

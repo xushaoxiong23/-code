@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="./lib/html5shiv/html5shiv.min.js"></script>
+    <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+      //父类
+    function Person(name,sex)
+    {
+        this.name=name;
+        this.sex=sex;
+        this.friends=['李四'];
+    }
+    Person.prototype.id=1;
+    //子类
+    function Boy(name,sex,age)
+    {
+
+        //借用
+        Person.call(this,name,age);
+
+        this.age=age;
+        this.getAge=function(){
+            alert(this.age);    //*方法都在构造函数中定义，不能做到函数复用。
+        }
+
+    }
+var boy=new Boy("张三","男",16);
+    alert(boy.name);  //张三
+boy.getAge();        //16
+alert(boy.id);  //*undefined  没有继承父类的原型对象
+   //属性共享问题 ————不会有共享
+  //验证能否使用instanceof 和 isPrototypeof
+    console.log(boy instanceof Person);                 //false  boy—>boy.boy.prototype
+    console.log(Person.prototype.isPrototypeOf(boy));   //false
+</script>
+
+</body>
+</html>
